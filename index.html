@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#39AC6E" />
+  <title>Vue.JS QuickStart</title>
+  <link rel="stylesheet" href="/css/app.css" media="screen" title="Base Application Styles">
+</head>
+<body>
+
+  <div id="app">
+    <p> {{ message }} </p>
+    <input type="text" v-model="message">
+  </div>
+  <div id="todo-list">
+    <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
+    <ol>
+      <li v-for="todo in todos">
+        <span> {{ todo.text }} </span>
+        <button v-on:click="removeTodo($index)">X</button>
+      </li>
+    </ol>
+  </div>
+
+  <script src="vendor/vue.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+</html>
