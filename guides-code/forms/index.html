@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#39AC6E" />
+  <title>Vue.JS QuickStart</title>
+  <link rel="stylesheet" href="/css/app.css" media="screen" title="Base Application Styles">
+</head>
+<body>
+  <div id="app" style="width:30%;margin:0 auto;">
+    <div class="checkbox-part">
+      <p>Single Checkbox</p>
+      <input type="checkbox" name="checkbox" id="checkbox" v-model="checked">
+      <label for="checkbox">{{checked}}</label>
+
+    </div>
+    <hr>
+
+
+    <div class="multiple-checkboxes">
+      <p>Multiple Checkboxes</p>
+      <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+      <label for="jack">Jack</label><br>
+      <input type="checkbox" id="john" value="John" v-model="checkedNames">
+      <label for="john">John</label><br>
+      <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+      <label for="mike">Mike</label><br>
+      <br>
+      <span>Checked names: {{ checkedNames | json }}</span>
+    </div>
+    <hr>
+
+
+    <div class="radio-buttons">
+      <p>Radio Buttons</p>
+      <input type="radio" id="one" value="One" v-model="picked">
+      <label for="one">One</label>
+      <br>
+      <input type="radio" id="two" value="Two" v-model="picked">
+      <label for="two">Two</label>
+      <br>
+      <span>Picked: {{ picked }}</span>
+    </div>
+    <hr>
+
+
+    <div class="single-select">
+      <p>Single Select</p>
+      <select v-model="selected">
+        <option selected>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+      <span>Selected: {{ selected }}</span>
+    </div>
+    <hr>
+
+    <div class="multiple-select">
+      <p>Multiple Select</p>
+      <select v-model="selectedmulti" multiple>
+        <option selected>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+      <br>
+      <span>Selected: {{ selectedmulti | json }}</span>
+    </div>
+    <hr>
+
+    <div class="dynamic-options">
+      <p>Dynamic Options</p>
+      <select v-model="selecteddyn">
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+      <span>Selected: {{ selecteddyn }}</span>
+    </div>
+
+
+  </div>
+
+
+
+  <script src="/vendor/vue.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
