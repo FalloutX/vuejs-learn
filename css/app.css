@@ -25,3 +25,21 @@ body {
   background-color: white;
   color.black;
 }
+#company {
+  width: 30%;
+  margin: 0px auto;
+  text-align: center;
+}
+#company h1, h2, h3, h4, h5, h6, p {
+  margin: 6px 0;
+}
+.emp-data{
+  width: 100%;
+  text-align: center;
+  padding: 10px 25px;
+  border-bottom: 1px solid #333;
+  margin: 0 auto;
+}
+.emp-data h5{
+  font-weight: 300;
+}

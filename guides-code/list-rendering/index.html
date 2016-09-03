@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#39AC6E" />
+  <title>Vue.JS QuickStart</title>
+  <link rel="stylesheet" href="/css/app.css" media="screen" title="Base Application Styles">
+</head>
+<body>
+  <div id="company">
+    <h1> {{companyName}} </h1>
+    <div class="comp-data" v-for="data in companyData">
+      <span><b>{{$key | capitalize}}:</b></span> {{data}}
+    </div>
+    <div class="comp-data">
+      <span><b>Strength:</b></span> {{staffRoll}}
+    </div>
+    <div id="employees">
+      <h1> Employees @ {{companyName}}</h1>
+      <div class="emp-data" v-for="emp in emps">
+        <h3>{{$index + 1}}. {{emp.name}}</h3>
+        <h5>{{emp.role}} @ Department of {{emp.dept}} / {{companyName}}</h5>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="/vendor/vue.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
