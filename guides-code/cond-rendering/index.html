@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#39AC6E" />
+  <title>Vue.JS QuickStart</title>
+  <link rel="stylesheet" href="/css/app.css" media="screen" title="Base Application Styles">
+</head>
+<body>
+
+  <div id="app">
+    <template v-if="showGreeting">
+      <h1> {{greeting + " " + name}}</h1>
+      <p>
+        {{description}}
+      </p>
+      <blockquote v-show="greeter">
+        - {{greeter}}
+      </blockquote>
+    </template>
+    <template v-else>
+      <h1>{{name}}, You have been Greeted Before</h1>
+    </template>
+
+  </div>
+
+
+  <script src="/vendor/vue.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
