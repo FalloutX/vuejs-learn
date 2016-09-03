@@ -1,11 +1,11 @@
-new Vue({
+var helloVueComponent = new Vue({
   el: '#app',
   data: {
     message: 'Learning Vue.js'
   }
 });
 
-new Vue({
+var todoListComponent = new Vue({
   el: '#todo-list',
   data: {
     newTodo: '',
