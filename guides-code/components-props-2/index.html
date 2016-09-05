@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#39AC6E" />
+  <title>Vue.JS QuickStart</title>
+  <link rel="stylesheet" href="/css/app.css" media="screen" title="Base Application Styles">
+</head>
+<body>
+  <div id="app" style="width:30%;margin:0 auto;">
+    <h4>Parent Version of data.uid: {{uid}}</h4>
+    <input type="number" name="uid" id="uidInput" v-model="uid">
+    <div style="border: 2px solid #39F;"> One way binding.
+      <child :pid="uid"></child>
+    </div>
+    <div style="border: 2px solid #9F3;"> Two-way Syncing Binding.
+      <child :pid.sync="uid"></child>
+    </div>
+    <div style="border: 2px solid #F93;"> One time binding.
+      <child :pid.once="uid"></child>
+    </div>
+  </div>
+
+
+
+  <script src="/vendor/vue.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
