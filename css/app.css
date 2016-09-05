@@ -8,6 +8,8 @@
 
 body {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: #c8c8c8;
+  background-color: #363636;
 }
 
 #app {
