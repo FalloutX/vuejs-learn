@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#39AC6E" />
+  <title>Vue.JS QuickStart</title>
+  <link rel="stylesheet" href="/css/app.css" media="screen" title="Base Application Styles">
+</head>
+<body>
+  <template id="child-template">
+    <div>
+      <h5>This is the Child Component!</h5>
+      <slot>
+        This will only be displayed if Parent doesn't send anything
+        inside my tags.
+      </slot>
+      <slot name="first">Here, we could have the first slot content</slot>
+      <slot name="second">Here, we could have the second slot content</slot>
+      <slot name="five">May be a fifth slot if possible</slot>
+    </div>
+  </template>
+  <div id="app" style="width:30%;margin:0 auto;">
+
+    <child>
+      <div> Slot Target Content</div> <!-- Unnamed Slot/ Default Slot -->
+      <div slot="first"> First Slot Content</div>
+      <div slot="second"> Second Slot Content</div>
+      <div slot="third"> Third Slot Content</div>
+
+    </child>
+  </div>
+
+
+
+  <script src="/vendor/vue.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
