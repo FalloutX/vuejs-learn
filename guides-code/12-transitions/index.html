@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#39AC6E" />
+  <title>Vue.JS QuickStart</title>
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="costum.css" >
+
+</head>
+<body>
+
+  <div id="app" style="width:30%;margin:0 auto;">
+    <div id="internal">
+      <div v-if="show" transition="expand">
+        <!--  For using dynamic transitions, use the line below.-->
+        <!-- <div v-if="show" :transition="transitionName">hello</div> -->
+        Learning Vue.js Transitions
+      </div>
+      <button @click="toggleShow()"> Toggle</button>
+    </div>
+  </div>
+
+
+
+  <script src="/vendor/vue.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
